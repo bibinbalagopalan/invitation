@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinthana & Avinash Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;800&family=Great+Vibes&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary-color: #B8860B;     /* Deep Gold */
+            --secondary-color: #E6BE8A;   /* Light Gold */
+            --accent-color: #FFF8DC;      /* Cream */
+            --text-dark: #2C1810;         /* Deep Brown */
+            --text-light: #FFF8E7;        /* Light Cream */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80') 
+                center/cover fixed;
+            color: var(--text-light);
+            text-align: center;
+            font-family: 'Lora', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header-content {
+            position: relative;
+            padding: 60px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+
+        .couple-names-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .couple-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 6.5em;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+            font-weight: normal;
+        }
+
+        .ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 7em;
+            color: var(--primary-color);
+            margin: 5px 0;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        }
+
+        .save-the-date {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            letter-spacing: 3px;
+            margin: 30px 0;
+        }
+
+        .details {
+            background: rgba(184, 134, 11, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            padding: 50px 30px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        .details h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+        }
+
+        .details p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .date-time {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 2.2em;
+            color: var(--secondary-color);
+            margin: 30px 0;
+        }
+
+        .ornament {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin: 30px 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid var(--primary-color);
+            margin-top: 40px;
+        }
+
+        .quote {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+            color: var(--secondary-color);
+            margin: 40px 0;
+            line-height: 1.5;
+        }
+
+        .invitation-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8em;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            margin: 15px 0;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+            opacity: 0.9;
+        }
+
+        .invitation-text.highlight {
+            color: var(--accent-color);
+            font-size: 3em;
+            margin: 25px 0;
+        }
+        
+        .audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Play audio when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('bgMusic');
+            audio.volume = 0.5;
+            audio.play();
+        });
+
+        // Play on any user interaction (required for some browsers)
+        function playAudio() {
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+            document.removeEventListener('click', playAudio);
+            document.removeEventListener('touchstart', playAudio);
+        }
+
+        document.addEventListener('click', playAudio);
+        document.addEventListener('touchstart', playAudio);
+    </script>
+
+    <div class="container">
+        <header class="header-content animate__animated animate__fadeIn">
+            <div class="couple-names-container">
+                <div class="couple-name">Chinthana</div>
+                <div class="ampersand">&</div>
+                <div class="couple-name">Avinash</div>
+            </div>
+            <p class="invitation-text">Together with their families</p>
+            <p class="invitation-text highlight animate__animated animate__fadeIn animate__delay-1s">request the pleasure of your company</p>
+            <p class="invitation-text animate__animated animate__fadeIn animate__delay-2s">as they join hands in marriage</p>
+        </header>
+
+        <section class="details animate__animated animate__fadeInUp">
+            <h2>Celebration of Love</h2>
+            <div class="date-time">Sunday, 11th May 2025</div>
+            <p><strong>Muhurtham</strong><br>Between 11:12 AM and 12:12 PM</p>
+            <p><strong>Venue</strong><br>Hajmus Convention Center<br>7th Mile, Taliparamba</p>
+
+            <div class="quote">
+                "Two souls with but a single thought,<br>Two hearts that beat as one."
+            </div>
+
+            <iframe src="https://www.google.com/maps?q=Hajmus%20Convention%20Center%207th%20Mile%20Taliparamba&output=embed"></iframe>
+        </section>
+    </div>
+    <script>
+        // Ensure music plays on page load
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('bgMusic');
+            audio.volume = 0.5; // Set volume to 50%
+            
+            // Try to play automatically
+            var playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                    // Auto-play was prevented
+                    // Show a "Play" button so that user can start playback
+                    console.log("Autoplay prevented");
+                });
+            }
+        });
+
+        // Backup: Play on first user interaction
+        document.addEventListener('click', function() {
+            document.getElementById('bgMusic').play();
+        }, { once: true });
+    </script>
+</body>
+</html>
